@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.943 s <<< FAILURE! - in TestSuite
-flipkart(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
-
-tearDown(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0.015 s  <<< FAILURE!
-java.lang.NullPointerException
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.998 s - in TestSuite

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-FlipkartSuite">
-              <span class="suite-name border-failed">FlipkartSuite</span>
+              <span class="suite-name border-passed">FlipkartSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-FlipkartSuite" class="hide-methods failed suite-FlipkartSuite"> (hide)</a> <!-- hide-methods failed suite-FlipkartSuite -->
-                      <a href="#" panel-name="suite-FlipkartSuite" class="show-methods failed suite-FlipkartSuite"> (show)</a> <!-- show-methods failed suite-FlipkartSuite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-FlipkartSuite" class="hide-methods passed suite-FlipkartSuite"> (hide)</a> <!-- hide-methods passed suite-FlipkartSuite -->
+                      <a href="#" panel-name="suite-FlipkartSuite" class="show-methods passed suite-FlipkartSuite"> (show)</a> <!-- show-methods passed suite-FlipkartSuite -->
                     </span>
-                    <div class="method-list-content failed suite-FlipkartSuite">
+                    <div class="method-list-content passed suite-FlipkartSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FlipkartSuite" title="com.FlipkartKiwiqaFramework.product.ProductIndex" hash-for-method="flipkart">flipkart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-FlipkartSuite -->
+                    </div> <!-- method-list-content passed suite-FlipkartSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FlipkartSuite" class="panel FlipkartSuite">
-          <div class="suite-FlipkartSuite-class-failed">
+          <div class="suite-FlipkartSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.FlipkartKiwiqaFramework.product.ProductIndex</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,14 +128,10 @@
                   <a name="flipkart">
                   </a> <!-- flipkart -->
                   <span class="method-name">flipkart</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FlipkartSuite-class-failed -->
+          </div> <!-- suite-FlipkartSuite-class-passed -->
         </div> <!-- panel FlipkartSuite -->
         <div panel-name="test-xml-FlipkartSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,12 +196,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'flipkart')
 data.setCell(0, 2, 'com.FlipkartKiwiqaFramework.product.ProductIndex')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 24199);
 window.suiteTableData['FlipkartSuite']= { tableData: data, tableDiv: 'times-div-FlipkartSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-FlipkartSuite">
               </div> <!-- times-div-FlipkartSuite -->
             </div> <!-- times-div -->
@@ -220,6 +216,18 @@ return data;
               <span class="reporter-method-name">flipkart</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Step-1 : Open the URL -> https://www.flipkart.com/</br></span>
+                <span class="reporter-method-output">Step-2 : Mouse hover on 'electronics'</br></span>
+                <span class="reporter-method-output">Step-3 : Click on 'Realme'</br></span>
+                <span class="reporter-method-output">Verify to only Realme products are displayed: -> </br></span>
+                <span class="reporter-method-output">Only Realme products are displayed<font color=238E23>--<img src="passed.png"/></font></br></span>
+                <span class="reporter-method-output">Step-4 : Select price range from dragger</br></span>
+                <span class="reporter-method-output">Step-5 : Select '4 GB' checkbox</br></span>
+                <span class="reporter-method-output">Verify to only 4 GB RAM products are displayed: -> </br></span>
+                <span class="reporter-method-output">Only 4 GB RAM products are displayed<font color=238E23>--<img src="passed.png"/></font></br></span>
+                <span class="reporter-method-output">Step-6 : Click on First product</br></span>
+                <span class="reporter-method-output">Step-7 : Click on 'Add to Cart' button</br></span>
+                <span class="reporter-method-output">Verify to check cart is not empty: -> </br></span>
+                <span class="reporter-method-output">Cart is not empty<font color=238E23>--<img src="passed.png"/></font></br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,24 +247,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.FlipkartKiwiqaFramework.product.ProductIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@314c508a)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@26adfd2d)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart() throws java.lang.Interrupted...)</span>
-                <span class="method-start">52 ms</span>
+                <span class="method-start">46 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">flipkart</span>
-                <span class="method-start">86 ms</span>
+                <span class="method-start">15520 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">tearDown([TestResult name=flipkart status=FAILURE method=ProductIndex.flipkart()[pri:0, instance:com.Flipkart...)</span>
-                <span class="method-start">92 ms</span>
+                <span class="method-name">tearDown([TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.Flipkart...)</span>
+                <span class="method-start">39721 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

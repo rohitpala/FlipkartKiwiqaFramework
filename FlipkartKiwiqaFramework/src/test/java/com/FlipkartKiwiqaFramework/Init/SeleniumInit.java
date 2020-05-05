@@ -95,8 +95,8 @@ public class SeleniumInit{
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) throws IOException 
 	{
-//		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
-//		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
+		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
+		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 		testUrl=TestData.getValueFromConfig("config.properties","URL");
 		//System.out.println("Payer URL: "+PayertestURL);
 	}
@@ -119,7 +119,7 @@ public class SeleniumInit{
 		{
 			targetBrowser="ie11";
 		}
-//		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
@@ -219,7 +219,30 @@ public class SeleniumInit{
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
+			driver= new ChromeDriver(capability);
+			
+//			capability = DesiredCapabilities.chrome();
+//			File driverpath = new File("Resource/chromedriver.exe");
+//			String path1 = driverpath.getAbsolutePath();
+//			System.setProperty("webdriver.chrome.driver",path1);
+//			final ChromeOptions chromeOptions = new ChromeOptions();
+//			//chromeOptions.setBinary("/usr/bin/chromium-browser");
+//			//chromeOptions.addArguments("--headless");
+//			capability.setBrowserName("chrome");
+//			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//			capability.setJavascriptEnabled(true);
+//			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
+//			capability.setCapability("disable-popup-blocking", true);
+//			osName = capability.getPlatform().name();
+//			capability = DesiredCapabilities.chrome();
+//			/*System.setProperty("webdriver.chrome.driver",
+//					"E:\\chromedriver.exe");*/
+//			capability.setBrowserName("chrome");
+//			capability.setJavascriptEnabled(true);
+//			osName = capability.getPlatform().name();
+//			browserVersion = capability.getVersion();
+//			//driver = new RemoteWebDriver(remote_grid, capability);
 //			driver= new ChromeDriver(capability);
 		}else if (targetBrowser.contains("safari"))
 		{

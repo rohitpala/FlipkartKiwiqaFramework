@@ -33,12 +33,13 @@ public class ProductIndexPage extends AbstractPage{
 //	WebElement electronics;
 	@FindBy(xpath=".//button[@class='_2AkmmA _29YdH8']")
 	WebElement closeLoginPopup;
-
-	String VisibleText = "Electronics";
-	WebElement electronics = driver.findElement(By.xpath(".//span[@class='_1QZ6fC _3Lgyp8'][text()='"+VisibleText+"']"));
+	@FindBy(xpath=".//span[@class='_1QZ6fC _3Lgyp8'][text()='Electronics']")
+	WebElement electronics;
+//	String VisibleText = "Electronics";
+//	WebElement electronics = driver.findElement(By.xpath(".//span[@class='_1QZ6fC _3Lgyp8'][text()='"+VisibleText+"']"));
 	public ProductVerification mouseHoveronElectronics()
 	{
-		Common.clickableElement(closeLoginPopup, driver);
+//		Common.clickableElement(closeLoginPopup, driver);
 		closeLoginPopup.click();
 		Actions action = new Actions(driver);
 		action.moveToElement(electronics).perform();
