@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Step-1 : Open the URL -> https://www.flipkart.com/</br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-2 : Mouse hover on 'electronics'</br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-3 : Click on 'Realme'</br>]]>
+    </line>
+    <line>
+      <![CDATA[Verify to only Realme products are displayed: -> </br>]]>
+    </line>
+    <line>
+      <![CDATA[Only Realme products are displayed<font color=238E23>--<img src="passed.png"/></font></br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-4 : Select price range from dragger</br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-5 : Select '4 GB' checkbox</br>]]>
+    </line>
+    <line>
+      <![CDATA[Verify to only 4 GB RAM products are displayed: -> </br>]]>
+    </line>
+    <line>
+      <![CDATA[Only 4 GB RAM products are displayed<font color=238E23>--<img src="passed.png"/></font></br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-6 : Click on First product</br>]]>
+    </line>
+    <line>
+      <![CDATA[Step-7 : Click on 'Add to Cart' button</br>]]>
+    </line>
+    <line>
+      <![CDATA[Verify to check cart is not empty: -> </br>]]>
+    </line>
+    <line>
+      <![CDATA[Cart is not empty<font color=238E23>--<img src="passed.png"/></font></br>]]>
+    </line>
+  </reporter-output>
+  <suite name="FlipkartSuite" duration-ms="44537" started-at="2020-05-04T08:52:31Z" finished-at="2020-05-04T08:53:16Z">
+    <groups>
+    </groups>
+    <test name="flipkartproduct" duration-ms="44537" started-at="2020-05-04T08:52:31Z" finished-at="2020-05-04T08:53:16Z">
+      <class name="com.FlipkartKiwiqaFramework.product.ProductIndex">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8]" name="fetchSuiteConfiguration" is-config="true" duration-ms="39" started-at="2020-05-04T08:52:31Z" finished-at="2020-05-04T08:52:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6cce16f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchSuiteConfiguration -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8]" name="setUp" is-config="true" duration-ms="15557" started-at="2020-05-04T08:52:31Z" finished-at="2020-05-04T08:52:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6cce16f4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8]" name="flipkart" duration-ms="27817" started-at="2020-05-04T08:52:47Z" finished-at="2020-05-04T08:53:15Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Step-1 : Open the URL -> https://www.flipkart.com/</br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-2 : Mouse hover on 'electronics'</br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-3 : Click on 'Realme'</br>]]>
+            </line>
+            <line>
+              <![CDATA[Verify to only Realme products are displayed: -> </br>]]>
+            </line>
+            <line>
+              <![CDATA[Only Realme products are displayed<font color=238E23>--<img src="passed.png"/></font></br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-4 : Select price range from dragger</br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-5 : Select '4 GB' checkbox</br>]]>
+            </line>
+            <line>
+              <![CDATA[Verify to only 4 GB RAM products are displayed: -> </br>]]>
+            </line>
+            <line>
+              <![CDATA[Only 4 GB RAM products are displayed<font color=238E23>--<img src="passed.png"/></font></br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-6 : Click on First product</br>]]>
+            </line>
+            <line>
+              <![CDATA[Step-7 : Click on 'Add to Cart' button</br>]]>
+            </line>
+            <line>
+              <![CDATA[Verify to check cart is not empty: -> </br>]]>
+            </line>
+            <line>
+              <![CDATA[Cart is not empty<font color=238E23>--<img src="passed.png"/></font></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- flipkart -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8]" name="tearDown" is-config="true" duration-ms="1100" started-at="2020-05-04T08:53:15Z" finished-at="2020-05-04T08:53:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@149494d8] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6cce16f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.FlipkartKiwiqaFramework.product.ProductIndex -->
+    </test> <!-- flipkartproduct -->
+  </suite> <!-- FlipkartSuite -->
+</testng-results>

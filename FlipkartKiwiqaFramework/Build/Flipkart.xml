@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FlipkartSuite" parallel = "false">
+<parameter name="selenium.host" value="127.0.0.1" /> 
+<parameter name="selenium.port" value="4444" />
+		
+<listeners>
+	<listener class-name="com.FlipkartKiwiqaFramework.Utility.CustomReporter" />
+	<listener class-name="com.FlipkartKiwiqaFramework.Utility.CustomReporterBuildSummary" />
+</listeners>
+
+  <test name="flipkartproduct">
+		<classes>
+			<class name="com.FlipkartKiwiqaFramework.product.ProductIndex">
+				<methods>
+					<include name="flipkart">
+					</include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
