@@ -74,12 +74,12 @@
 			<artifactId>commons-lang</artifactId>
 			<version>${version.commons.lang}</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${version.testng}</version>
 			<scope>test</scope>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
