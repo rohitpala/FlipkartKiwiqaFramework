@@ -1,25 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.419 s <<< FAILURE! - in TestSuite
-flipkart(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0.006 s  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.943 s <<< FAILURE! - in TestSuite
+flipkart(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.NullPointerException
 	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
 
-tearDown(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0.02 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-Session [null] not available and is not among the last 1000 terminated sessions.
-Active sessions are[ext. key 5d30bd5fff42e07de4b0291170ed5525]
-Command duration or timeout: 22 milliseconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'DESKTOP-159BPU0', ip: '192.168.43.234', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{capabilities={networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\admin\AppData\Local\Temp\scoped_dir22980_865678965}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, proxy={}, goog:chromeOptions={debuggerAddress=localhost:61557}, webdriver.remote.sessionid=5d30bd5fff42e07de4b0291170ed5525, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}, sessionId=5d30bd5fff42e07de4b0291170ed5525, platform=ANY}]
-Session ID: null
-Caused by: org.openqa.selenium.WebDriverException: 
-Session [null] not available and is not among the last 1000 terminated sessions.
-Active sessions are[ext. key 5d30bd5fff42e07de4b0291170ed5525]
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'DESKTOP-159BPU0', ip: '192.168.43.234', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
-Driver info: driver.version: unknown
+tearDown(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.NullPointerException
 

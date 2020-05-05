@@ -95,8 +95,8 @@ public class SeleniumInit{
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) throws IOException 
 	{
-		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
-		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
+//		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
+//		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 		testUrl=TestData.getValueFromConfig("config.properties","URL");
 		//System.out.println("Payer URL: "+PayertestURL);
 	}
@@ -119,7 +119,7 @@ public class SeleniumInit{
 		{
 			targetBrowser="ie11";
 		}
-		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+//		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
@@ -219,7 +219,7 @@ public class SeleniumInit{
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			driver = new RemoteWebDriver(remote_grid, capability);
+//			driver = new RemoteWebDriver(remote_grid, capability);
 //			driver= new ChromeDriver(capability);
 		}else if (targetBrowser.contains("safari"))
 		{
