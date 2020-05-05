@@ -21,6 +21,7 @@ public class ProductIndex extends SeleniumInit {
 		int numOfFailure = 0;
 
 		logStep(step++, "Open the URL -> " + testUrl);
+		Common.Pause(1);
 		productVerification = productIndexPage.mouseHoveronElectronics();
 		logStep(step++, "Mouse hover on 'electronics'");
 //		Common.Pause(1);

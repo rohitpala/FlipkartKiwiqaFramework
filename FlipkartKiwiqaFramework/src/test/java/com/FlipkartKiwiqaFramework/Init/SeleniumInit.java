@@ -199,29 +199,6 @@ public class SeleniumInit{
 //			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("chrome") || targetBrowser.equalsIgnoreCase("chrome"))
 		{
-			capability = DesiredCapabilities.chrome();
-			File driverpath = new File("Resource/chromedriver.exe");
-			String path1 = driverpath.getAbsolutePath();
-			System.setProperty("webdriver.chrome.driver",path1);
-			final ChromeOptions chromeOptions = new ChromeOptions();
-			//chromeOptions.setBinary("/usr/bin/chromium-browser");
-			//chromeOptions.addArguments("--headless");
-			capability.setBrowserName("chrome");
-			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-			capability.setJavascriptEnabled(true);
-			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-			capability.setCapability("disable-popup-blocking", true);
-			osName = capability.getPlatform().name();
-//			capability = DesiredCapabilities.chrome();
-			/*System.setProperty("webdriver.chrome.driver",
-					"E:\\chromedriver.exe");*/
-//			capability.setBrowserName("chrome");
-			capability.setJavascriptEnabled(true);
-			osName = capability.getPlatform().name();
-			browserVersion = capability.getVersion();
-			driver = new RemoteWebDriver(remote_grid, capability);
-			driver= new ChromeDriver(capability);
-			
 //			capability = DesiredCapabilities.chrome();
 //			File driverpath = new File("Resource/chromedriver.exe");
 //			String path1 = driverpath.getAbsolutePath();
@@ -235,15 +212,38 @@ public class SeleniumInit{
 //			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 //			capability.setCapability("disable-popup-blocking", true);
 //			osName = capability.getPlatform().name();
-//			capability = DesiredCapabilities.chrome();
+////			capability = DesiredCapabilities.chrome();
 //			/*System.setProperty("webdriver.chrome.driver",
 //					"E:\\chromedriver.exe");*/
-//			capability.setBrowserName("chrome");
+////			capability.setBrowserName("chrome");
 //			capability.setJavascriptEnabled(true);
 //			osName = capability.getPlatform().name();
 //			browserVersion = capability.getVersion();
-//			//driver = new RemoteWebDriver(remote_grid, capability);
+//			driver = new RemoteWebDriver(remote_grid, capability);
 //			driver= new ChromeDriver(capability);
+			
+			capability = DesiredCapabilities.chrome();
+			File driverpath = new File("Resource/chromedriver.exe");
+			String path1 = driverpath.getAbsolutePath();
+			System.setProperty("webdriver.chrome.driver",path1);
+			final ChromeOptions chromeOptions = new ChromeOptions();
+			//chromeOptions.setBinary("/usr/bin/chromium-browser");
+			//chromeOptions.addArguments("--headless");
+			capability.setBrowserName("chrome");
+			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+			capability.setJavascriptEnabled(true);
+			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
+			capability.setCapability("disable-popup-blocking", true);
+			osName = capability.getPlatform().name();
+			capability = DesiredCapabilities.chrome();
+			/*System.setProperty("webdriver.chrome.driver",
+					"E:\\chromedriver.exe");*/
+			capability.setBrowserName("chrome");
+			capability.setJavascriptEnabled(true);
+			osName = capability.getPlatform().name();
+			browserVersion = capability.getVersion();
+			driver = new RemoteWebDriver(remote_grid, capability);
+			driver= new ChromeDriver(capability);
 		}else if (targetBrowser.contains("safari"))
 		{
 			capability = DesiredCapabilities.safari();
