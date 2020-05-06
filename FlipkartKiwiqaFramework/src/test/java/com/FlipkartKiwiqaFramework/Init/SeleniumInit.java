@@ -219,7 +219,7 @@ public class SeleniumInit{
 //			capability.setJavascriptEnabled(true);
 //			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			driver= new ChromeDriver(capability);
+//			driver= new ChromeDriver(capability);
 			driver = new RemoteWebDriver(remote_grid, capability);
 			
 			

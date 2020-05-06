@@ -128,8 +128,17 @@
                   <a name="flipkart">
                   </a> <!-- flipkart -->
                   <span class="method-name">flipkart</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for element to be clickable: [[RemoteWebDriver: chrome on ANY (8e55458b114f3b6635a0cbd6d16b9134)] -&gt; xpath: .//a[@title=&apos;Realme&apos;]]
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir17056_1678764297}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:57957}, webdriver.remote.sessionid=8e55458b114f3b6635a0cbd6d16b9134, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
+Session ID: 8e55458b114f3b6635a0cbd6d16b9134
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.FlipkartKiwiqaFramework.Init.Common.clickableElement(Common.java:682)
+	at com.FlipkartKiwiqaFramework.product.ProductIndexPage.clickonRealme(ProductIndexPage.java:55)
+	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:28)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -146,8 +155,8 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;FlipkartSuite&quot;&gt;
-  &lt;parameter name=&quot;selenium.port&quot; value=&quot;4444&quot;/&gt;
-  &lt;parameter name=&quot;selenium.host&quot; value=&quot;192.168.43&quot;/&gt;
+  &lt;parameter name=&quot;selenium.port&quot; value=&quot;4445&quot;/&gt;
+  &lt;parameter name=&quot;selenium.host&quot; value=&quot;192.168.43.234&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.FlipkartKiwiqaFramework.Utility.CustomReporter&quot;/&gt;
     &lt;listener class-name=&quot;com.FlipkartKiwiqaFramework.Utility.CustomReporterBuildSummary&quot;/&gt;
@@ -202,12 +211,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'flipkart')
 data.setCell(0, 2, 'com.FlipkartKiwiqaFramework.product.ProductIndex')
-data.setCell(0, 3, 3);
+data.setCell(0, 3, 31116);
 window.suiteTableData['FlipkartSuite']= { tableData: data, tableDiv: 'times-div-FlipkartSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 ms</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-FlipkartSuite">
               </div> <!-- times-div-FlipkartSuite -->
             </div> <!-- times-div -->
@@ -222,8 +231,9 @@ return data;
               <span class="reporter-method-name">flipkart</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Step-1 : Open the URL -> https://www.flipkart.com/</br></span>
+                <span class="reporter-method-output">Step-2 : Mouse hover on 'electronics'</br></span>
                 <span class="reporter-method-output"><br><Strong><font color=#FF0000>--Failed</font></strong></br></span>
-                <span class="reporter-method-output">Please look to the screenshot :- <a href='../test-output/screenshots/20200506125900378.png' target='_new'>20200506125900378.png</a></br></span>
+                <span class="reporter-method-output">Please look to the screenshot :- <a href='../test-output/screenshots/20200506151443704.png' target='_new'>20200506151443704.png</a></br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,7 +253,7 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.FlipkartKiwiqaFramework.product.ProductIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@68878f6d)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@5a5a729f)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
@@ -254,11 +264,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">flipkart</span>
-                <span class="method-start">27135 ms</span>
+                <span class="method-start">24835 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=flipkart status=FAILURE method=ProductIndex.flipkart()[pri:0, instance:com.Flipkart...)</span>
-                <span class="method-start">27151 ms</span>
+                <span class="method-start">55981 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

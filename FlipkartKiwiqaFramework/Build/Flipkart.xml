@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="FlipkartSuite" parallel = "false">
 <!-- <parameter name="selenium.host" value="127.0.0.1" />  -->
-<parameter name="selenium.host" value="192.168.43" /> 
-<parameter name="selenium.port" value="4444" />
+<parameter name="selenium.host" value="192.168.43.234" /> 
+<parameter name="selenium.port" value="4445" />
 		
 <listeners>
 	<listener class-name="com.FlipkartKiwiqaFramework.Utility.CustomReporter" />

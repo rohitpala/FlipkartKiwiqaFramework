@@ -123,7 +123,7 @@ public class ProductIndexPage extends AbstractPage{
 	{
 		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
-		Common.clickableElement(productAddtoCart, driver);
+//		Common.clickableElement(productAddtoCart, driver);
 		productAddtoCart.click();
 		return new ProductVerification(driver);
 	}

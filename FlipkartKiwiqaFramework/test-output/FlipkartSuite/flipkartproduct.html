@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 06 12:58:33 IST 2020</td>
+<td>Started on:</td><td>Wed May 06 15:13:47 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28711 ms)</td>
+<tr><td>Total time:</td><td>98 seconds (98025 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,39 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart()'><b>flipkart</b><br>Test class: com.FlipkartKiwiqaFramework.product.ProductIndex<br/>
-<a href="#Output-138776324" onClick='toggleBox("Output-138776324", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1617838096" onClick='toggleBox("Output-1617838096", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-138776324" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-138776324">
+<a href="#Output-1617838096" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1617838096">
 Step-1 : Open the URL -> https://www.flipkart.com/</br><br/>
+Step-2 : Mouse hover on 'electronics'</br><br/>
 <br><Strong><font color=#FF0000>--Failed</font></strong></br><br/>
-Please look to the screenshot :- <a href='../test-output/screenshots/20200506125900378.png' target='_new'>20200506125900378.png</a></br><br/>
+Please look to the screenshot :- <a href='../test-output/screenshots/20200506151443704.png' target='_new'>20200506151443704.png</a></br><br/>
 </div>
 </td>
-<td><div><pre>java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace138776324", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace138776324'><pre>java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for element to be clickable: [[RemoteWebDriver: chrome on ANY (8e55458b114f3b6635a0cbd6d16b9134)] -&gt; xpath: .//a[@title=&apos;Realme&apos;]]
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir17056_1678764297}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:57957}, webdriver.remote.sessionid=8e55458b114f3b6635a0cbd6d16b9134, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
+Session ID: 8e55458b114f3b6635a0cbd6d16b9134
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.FlipkartKiwiqaFramework.Init.Common.clickableElement(Common.java:682)
+	at com.FlipkartKiwiqaFramework.product.ProductIndexPage.clickonRealme(ProductIndexPage.java:55)
+	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:28)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1617838096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1617838096'><pre>org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for element to be clickable: [[RemoteWebDriver: chrome on ANY (8e55458b114f3b6635a0cbd6d16b9134)] -&gt; xpath: .//a[@title=&apos;Realme&apos;]]
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir17056_1678764297}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:57957}, webdriver.remote.sessionid=8e55458b114f3b6635a0cbd6d16b9134, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
+Session ID: 8e55458b114f3b6635a0cbd6d16b9134
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.FlipkartKiwiqaFramework.Init.Common.clickableElement(Common.java:682)
+	at com.FlipkartKiwiqaFramework.product.ProductIndexPage.clickonRealme(ProductIndexPage.java:55)
+	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,7 +139,7 @@ Please look to the screenshot :- <a href='../test-output/screenshots/20200506125
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
 </pre></div></td>
-<td>0</td>
+<td>31</td>
 <td>com.FlipkartKiwiqaFramework.product.ProductIndex@52feb982</td></tr>
 </table><p>
 </body>

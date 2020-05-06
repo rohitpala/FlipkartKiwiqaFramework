@@ -1,8 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 29.784 s <<< FAILURE! - in TestSuite
-flipkart(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 0.003 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:24)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 99.214 s <<< FAILURE! - in TestSuite
+flipkart(com.FlipkartKiwiqaFramework.product.ProductIndex)  Time elapsed: 31.147 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Timed out after 10 seconds waiting for element to be clickable: [[RemoteWebDriver: chrome on ANY (8e55458b114f3b6635a0cbd6d16b9134)] -> xpath: .//a[@title='Realme']]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-159BPU0', ip: '192.168.43.234', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir17056_1678764297}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:57957}, webdriver.remote.sessionid=8e55458b114f3b6635a0cbd6d16b9134, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
+Session ID: 8e55458b114f3b6635a0cbd6d16b9134
+	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:28)
 

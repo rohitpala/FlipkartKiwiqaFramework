@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [FlipkartSuite]">
-  <parameter name="selenium.port" value="4444"/>
-  <parameter name="selenium.host" value="192.168.43"/>
+  <parameter name="selenium.port" value="4445"/>
+  <parameter name="selenium.host" value="192.168.43.234"/>
   <listeners>
     <listener class-name="com.FlipkartKiwiqaFramework.Utility.CustomReporter"/>
     <listener class-name="com.FlipkartKiwiqaFramework.Utility.CustomReporterBuildSummary"/>
