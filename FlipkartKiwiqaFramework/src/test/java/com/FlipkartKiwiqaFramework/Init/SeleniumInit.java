@@ -162,7 +162,7 @@ public class SeleniumInit{
 			osName = System.getProperty("os.name");
 			HomeDir=System.getProperty("user.home");
 			driver= new FirefoxDriver(capability);
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("ie8") || targetBrowser.equalsIgnoreCase("IE"))
 		{
 			capability = DesiredCapabilities.internetExplorer();
@@ -173,7 +173,7 @@ public class SeleniumInit{
 			capability.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("ie9"))
 		{
 			capability = DesiredCapabilities.internetExplorer();
@@ -196,7 +196,7 @@ public class SeleniumInit{
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
 			driver= new InternetExplorerDriver(capability);
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("chrome") || targetBrowser.equalsIgnoreCase("chrome"))
 		{
 			capability = DesiredCapabilities.chrome();
@@ -216,34 +216,28 @@ public class SeleniumInit{
 			/*System.setProperty("webdriver.chrome.driver",
 					"E:\\chromedriver.exe");*/
 //			capability.setBrowserName("chrome");
-			capability.setJavascriptEnabled(true);
-			osName = capability.getPlatform().name();
+//			capability.setJavascriptEnabled(true);
+//			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			driver = new RemoteWebDriver(remote_grid, capability);
 			driver= new ChromeDriver(capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
+			
+			
 			
 //			capability = DesiredCapabilities.chrome();
 //			File driverpath = new File("Resource/chromedriver.exe");
 //			String path1 = driverpath.getAbsolutePath();
 //			System.setProperty("webdriver.chrome.driver",path1);
-//			final ChromeOptions chromeOptions = new ChromeOptions();
-//			//chromeOptions.setBinary("/usr/bin/chromium-browser");
-//			//chromeOptions.addArguments("--headless");
 //			capability.setBrowserName("chrome");
-//			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-//			capability.setJavascriptEnabled(true);
-//			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-//			capability.setCapability("disable-popup-blocking", true);
-//			osName = capability.getPlatform().name();
-//			capability = DesiredCapabilities.chrome();
-//			/*System.setProperty("webdriver.chrome.driver",
-//					"E:\\chromedriver.exe");*/
-//			capability.setBrowserName("chrome");
+////			capability.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+////			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+//			capability.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+//			capability.setCapability("nativeEvents", false);
 //			capability.setJavascriptEnabled(true);
 //			osName = capability.getPlatform().name();
-//			browserVersion = capability.getVersion();
-//			//driver = new RemoteWebDriver(remote_grid, capability);
 //			driver= new ChromeDriver(capability);
+//			driver = new RemoteWebDriver(remote_grid, capability);
+			
 		}else if (targetBrowser.contains("safari"))
 		{
 			capability = DesiredCapabilities.safari();
@@ -303,7 +297,8 @@ public class SeleniumInit{
 	        }
 			else
 			{
-				Result="Skeep";
+//				Result="Skeep";
+				Result="Skip";
 			}
 			//TestData.updatedBuildAnalysis("BuildAnalysis.xlsx", "BuildAnalysis",header ,testName, Result,col);
 		}catch(Exception e)

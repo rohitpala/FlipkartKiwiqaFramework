@@ -15,7 +15,7 @@ import com.FlipkartKiwiqaFramework.Init.SeleniumInit;
 
 public class ProductIndex extends SeleniumInit {
 	  
-	  @Test //(enabled = false)
+	@Test
 	public void flipkart() throws InterruptedException {
 		int step = 1;
 		int numOfFailure = 0;
