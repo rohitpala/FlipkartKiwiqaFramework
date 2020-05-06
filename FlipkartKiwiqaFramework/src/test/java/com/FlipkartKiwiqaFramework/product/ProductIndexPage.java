@@ -33,16 +33,23 @@ public class ProductIndexPage extends AbstractPage{
 //	WebElement electronics;
 	@FindBy(xpath=".//button[@class='_2AkmmA _29YdH8']")
 	WebElement closeLoginPopup;
+	public ProductVerification closePopup()
+	{
+		Common.clickableElement(closeLoginPopup, driver);
+		closeLoginPopup.click();
+		return new ProductVerification(driver);
+	}
+	
 	@FindBy(xpath=".//span[@class='_1QZ6fC _3Lgyp8'][text()='Electronics']")
 	WebElement electronics;
 //	String VisibleText = "Electronics";
 //	WebElement electronics = driver.findElement(By.xpath(".//span[@class='_1QZ6fC _3Lgyp8'][text()='"+VisibleText+"']"));
 	public ProductVerification mouseHoveronElectronics()
 	{
-		Common.clickableElement(closeLoginPopup, driver);
-		closeLoginPopup.click();
+		Common.clickableElement(electronics, driver);
 		Actions action = new Actions(driver);
 		action.moveToElement(electronics).perform();
+//		Common.pause(1);
 		return new ProductVerification(driver);
 	}
 	
@@ -52,7 +59,7 @@ public class ProductIndexPage extends AbstractPage{
 //	WebElement realme6 = driver.findElement(By.xpath(".//a[@title='"+Company+"']"));
 	public ProductVerification clickonRealme()
 	{
-		Common.clickableElement(realme6, driver);
+//		Common.clickableElement(realme6, driver);
 		realme6.click();
 		return new ProductVerification(driver);
 	}
@@ -111,7 +118,7 @@ public class ProductIndexPage extends AbstractPage{
 			product1 = list_of_products.get(i).getText();
 			if (product1.equals(w1)) {
 				driver.findElement(By.partialLinkText(w1)).click();
-				Common.pause(3);
+				Common.pause(2);
 			}
 		}
 		return new ProductVerification(driver);
@@ -123,6 +130,8 @@ public class ProductIndexPage extends AbstractPage{
 	{
 		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
+//		String myWindowHandle = driver.getWindowHandle();
+//		driver.switchTo().window(myWindowHandle );
 //		Common.clickableElement(productAddtoCart, driver);
 		productAddtoCart.click();
 		return new ProductVerification(driver);

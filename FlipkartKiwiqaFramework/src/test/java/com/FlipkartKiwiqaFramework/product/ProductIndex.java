@@ -21,6 +21,10 @@ public class ProductIndex extends SeleniumInit {
 		int numOfFailure = 0;
 
 		logStep(step++, "Open the URL -> " + testUrl);
+		
+		productVerification = productIndexPage.closePopup();
+		logStep(step++, "Close the log in popup");
+		
 		productVerification = productIndexPage.mouseHoveronElectronics();
 		logStep(step++, "Mouse hover on 'electronics'");
 //		Common.Pause(1);
@@ -64,6 +68,7 @@ public class ProductIndex extends SeleniumInit {
 
 		productVerification = productIndexPage.addToCart();
 		logStep(step++, "Click on 'Add to Cart' button");
+		
 		Common.Pause(2);
 		log("Verify to check cart is not empty: -> ");
 		if (productVerification.verifyProductInCart()) {
