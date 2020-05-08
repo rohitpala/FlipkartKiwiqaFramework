@@ -178,8 +178,8 @@
 						</property>
 					</properties>
 					
-					<testErrorIgnore>true</testErrorIgnore>
-               		<testFailureIgnore>true</testFailureIgnore>
+					<!-- <testErrorIgnore>true</testErrorIgnore>
+               		<testFailureIgnore>true</testFailureIgnore> -->
                 
 				</configuration>
 			</plugin>
