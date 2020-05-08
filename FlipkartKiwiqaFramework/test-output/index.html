@@ -128,18 +128,33 @@
                   <a name="flipkart">
                   </a> <!-- flipkart -->
                   <span class="method-name">flipkart</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for element to be clickable: [[RemoteWebDriver: chrome on ANY (7be9aad33413ce16204f4785d45aa61c)] -&gt; xpath: .//a[@title=&apos;Realme&apos;]]
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: invalid argument: &apos;handle&apos; must be a string
+  (Session info: chrome=81.0.4044.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 21 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir1708_1196562455}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:59134}, webdriver.remote.sessionid=7be9aad33413ce16204f4785d45aa61c, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
-Session ID: 7be9aad33413ce16204f4785d45aa61c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-	at com.FlipkartKiwiqaFramework.Init.Common.clickableElement(Common.java:682)
-	at com.FlipkartKiwiqaFramework.product.ProductIndexPage.clickonRealme(ProductIndexPage.java:62)
-	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:32)
-... Removed 29 stack frames
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\WINDOWS\TEMP\scoped_dir23332_439054806}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, platform=ANY, proxy={}, goog:chromeOptions={debuggerAddress=localhost:65089}, webdriver.remote.sessionid=fabdd7cdf79bd0f4abbb4763b6c0cea3, acceptInsecureCerts=false, browserVersion=81.0.4044.122, browserName=chrome, platformName=windows, setWindowRect=true}]
+Session ID: fabdd7cdf79bd0f4abbb4763b6c0cea3
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1015)
+	at com.FlipkartKiwiqaFramework.Init.Common.findAndSwitchToSecondWindow(Common.java:723)
+	at com.FlipkartKiwiqaFramework.product.ProductIndexPage.addToCart(ProductIndexPage.java:160)
+	at com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart(ProductIndex.java:69)
+Caused by: org.openqa.selenium.WebDriverException: invalid argument: &apos;handle&apos; must be a string
+  (Session info: chrome=81.0.4044.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;DESKTOP-159BPU0&apos;, ip: &apos;192.168.43.234&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: unknown
+... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -211,7 +226,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'flipkart')
 data.setCell(0, 2, 'com.FlipkartKiwiqaFramework.product.ProductIndex')
-data.setCell(0, 3, 37220);
+data.setCell(0, 3, 37353);
 window.suiteTableData['FlipkartSuite']= { tableData: data, tableDiv: 'times-div-FlipkartSuite'}
 return data;
 }
@@ -233,6 +248,16 @@ return data;
                 <span class="reporter-method-output">Step-1 : Open the URL -> https://www.flipkart.com/</br></span>
                 <span class="reporter-method-output">Step-2 : Close the log in popup</br></span>
                 <span class="reporter-method-output">Step-3 : Mouse hover on 'electronics'</br></span>
+                <span class="reporter-method-output">Step-4 : Click on 'Realme'</br></span>
+                <span class="reporter-method-output">Verify to only Realme products are displayed: -> </br></span>
+                <span class="reporter-method-output">Only Realme products are displayed<font color=238E23>--<img src="passed.png"/></font></br></span>
+                <span class="reporter-method-output">Step-5 : Select price range from dragger</br></span>
+                <span class="reporter-method-output">Step-6 : Select '4 GB' checkbox</br></span>
+                <span class="reporter-method-output">Verify to only 4 GB RAM products are displayed: -> </br></span>
+                <span class="reporter-method-output">Only 4 GB RAM products are displayed<font color=238E23>--<img src="passed.png"/></font></br></span>
+                <span class="reporter-method-output">Step-7 : Click on First product</br></span>
+                <span class="reporter-method-output"><br><Strong><font color=#FF0000>--Failed</font></strong></br></span>
+                <span class="reporter-method-output">Please look to the screenshot :- <a href='../test-output/screenshots/20200507182309824.png' target='_new'>20200507182309824.png</a></br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -252,22 +277,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.FlipkartKiwiqaFramework.product.ProductIndex</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@57db2b13)</span>
+                <span class="method-name">fetchSuiteConfiguration(org.testng.TestRunner@7dfd3c81)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void com.FlipkartKiwiqaFramework.product.ProductIndex.flipkart() throws java.lang.Interrupted...)</span>
-                <span class="method-start">65 ms</span>
+                <span class="method-start">48 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">flipkart</span>
-                <span class="method-start">21361 ms</span>
+                <span class="method-start">16623 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=flipkart status=FAILURE method=ProductIndex.flipkart()[pri:0, instance:com.Flipkart...)</span>
-                <span class="method-start">58613 ms</span>
+                <span class="method-start">54027 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

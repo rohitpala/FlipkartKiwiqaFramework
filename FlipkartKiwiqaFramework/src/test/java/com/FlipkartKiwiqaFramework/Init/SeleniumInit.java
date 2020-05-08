@@ -248,9 +248,9 @@ public class SeleniumInit{
 		
 		suiteName = testContext.getSuite().getName();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//		driver.manage().window().maximize();
-		Dimension d = new Dimension(1382,744); 
-		driver.manage().window().setSize(d); 
+		driver.manage().window().maximize();
+//		Dimension d = new Dimension(1382,744); 
+//		driver.manage().window().setSize(d); 
 		driver.get(testUrl);
 		/*if(targetBrowser.contains("ie11")){
 			driver.navigate().to(testUrl);

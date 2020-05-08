@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.os.WindowsRegistryException;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -59,8 +60,16 @@ public class ProductIndexPage extends AbstractPage{
 //	WebElement realme6 = driver.findElement(By.xpath(".//a[@title='"+Company+"']"));
 	public ProductVerification clickonRealme()
 	{
+//		Common.waitForElement(realme6, driver);
 //		Common.clickableElement(realme6, driver);
-		realme6.click();
+		try {
+			new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath(".//a[@title='Realme']")));
+			realme6.click();
+		} catch (Exception e) {
+//			e.printStackTrace();
+			Common.clickableElement(realme6, driver);
+			realme6.click();
+		}
 		return new ProductVerification(driver);
 	}
 	
@@ -128,12 +137,34 @@ public class ProductIndexPage extends AbstractPage{
 	WebElement productAddtoCart;
 	public ProductVerification addToCart()
 	{
-		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(1));
-//		String myWindowHandle = driver.getWindowHandle();
-//		driver.switchTo().window(myWindowHandle );
-//		Common.clickableElement(productAddtoCart, driver);
-		productAddtoCart.click();
+		try {
+//			ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+//			driver.switchTo().window(tabs.get(1));
+			
+			String parentWinHandle = driver.getWindowHandle();
+			Common.findAndSwitchToSecondWindow(driver, parentWinHandle);
+			
+//			String MainWindow = driver.getWindowHandle();
+//			ArrayList<String> windowHandles = new ArrayList<String>(driver.getWindowHandles());
+//			for (String window : windowHandles) 
+//			{
+//			if (window != MainWindow)
+//				{
+//				driver.switchTo().window(window);
+//				}
+//			}
+			Common.clickableElement(productAddtoCart, driver);
+			productAddtoCart.click();
+		} catch(Exception e) {
+			String parentWinHandle = driver.getWindowHandle();
+			Common.findAndSwitchToSecondWindow(driver, parentWinHandle);
+			
+			Common.clickableElement(productAddtoCart, driver);
+			productAddtoCart.click();
+		}
+		
+		
+		
 		return new ProductVerification(driver);
 	}
 }
