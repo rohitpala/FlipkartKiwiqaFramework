@@ -1,5 +1,6 @@
 package com.FlipkartKiwiqaFramework.product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
@@ -44,6 +45,13 @@ public class ProductIndex extends SeleniumInit {
 			Assert.assertTrue(false);
 		}
 		Common.Pause(2);
+		
+		try {
+			productIndexPage.storeNameandPrice();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		productVerification = productIndexPage.clickonFilter();
 		logStep(step++, "Select price range from dragger");
