@@ -27,7 +27,7 @@ public class ProductVerification extends AbstractPage{
 //		WebDriverWait wait = new WebDriverWait(driver, 30);
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@class='_3ycxrs _2Rwa71']")));
 //		Common.pause(1);
-		Common.clickableElement(productDiv, driver);
+//		Common.clickableElement(productDiv, driver);
 		if(productDiv.isDisplayed())
 			return true;
 		else
