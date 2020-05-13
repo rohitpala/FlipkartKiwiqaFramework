@@ -44,23 +44,23 @@
       <![CDATA[Cart is not empty<font color=238E23>--<img src="passed.png"/></font></br>]]>
     </line>
   </reporter-output>
-  <suite name="FlipkartSuite" duration-ms="41357" started-at="2020-05-13T07:54:59Z" finished-at="2020-05-13T07:55:40Z">
+  <suite name="FlipkartSuite" duration-ms="72595" started-at="2020-05-13T10:55:30Z" finished-at="2020-05-13T10:56:42Z">
     <groups>
     </groups>
-    <test name="flipkartproduct" duration-ms="41357" started-at="2020-05-13T07:54:59Z" finished-at="2020-05-13T07:55:40Z">
+    <test name="flipkartproduct" duration-ms="72595" started-at="2020-05-13T10:55:30Z" finished-at="2020-05-13T10:56:42Z">
       <class name="com.FlipkartKiwiqaFramework.product.ProductIndex">
-        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26]" name="fetchSuiteConfiguration" is-config="true" duration-ms="27" started-at="2020-05-13T13:24:59Z" finished-at="2020-05-13T13:24:59Z">
+        <test-method status="PASS" signature="fetchSuiteConfiguration(org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d]" name="fetchSuiteConfiguration" is-config="true" duration-ms="100" started-at="2020-05-13T16:25:30Z" finished-at="2020-05-13T16:25:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1e8823d2]]>
+                <![CDATA[org.testng.TestRunner@25230246]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fetchSuiteConfiguration -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26]" name="setUp" is-config="true" duration-ms="12069" started-at="2020-05-13T13:24:59Z" finished-at="2020-05-13T13:25:11Z">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d]" name="setUp" is-config="true" duration-ms="27251" started-at="2020-05-13T16:25:30Z" finished-at="2020-05-13T16:25:57Z">
           <params>
             <param index="0">
               <value>
@@ -69,19 +69,19 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@1e8823d2]]>
+                <![CDATA[org.testng.TestRunner@25230246]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
+                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26]" name="flipkart" duration-ms="26503" started-at="2020-05-13T13:25:11Z" finished-at="2020-05-13T13:25:38Z">
+        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d]" name="flipkart" duration-ms="37637" started-at="2020-05-13T16:25:57Z" finished-at="2020-05-13T16:26:35Z">
           <reporter-output>
             <line>
               <![CDATA[Step-1 : Open the URL -> https://www.flipkart.com/</br>]]>
@@ -127,16 +127,16 @@
             </line>
           </reporter-output>
         </test-method> <!-- flipkart -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26]" name="tearDown" is-config="true" duration-ms="2741" started-at="2020-05-13T13:25:38Z" finished-at="2020-05-13T13:25:40Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d]" name="tearDown" is-config="true" duration-ms="7527" started-at="2020-05-13T16:26:35Z" finished-at="2020-05-13T16:26:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@4b553d26] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
+                <![CDATA[[TestResult name=flipkart status=SUCCESS method=ProductIndex.flipkart()[pri:0, instance:com.FlipkartKiwiqaFramework.product.ProductIndex@69a3d1d] output=Step-1 : Open the URL -> https://www.flipkart.com/</br>]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@1e8823d2]]>
+                <![CDATA[org.testng.TestRunner@25230246]]>
               </value>
             </param>
           </params>
