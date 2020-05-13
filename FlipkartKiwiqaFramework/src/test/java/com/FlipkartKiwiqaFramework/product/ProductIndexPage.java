@@ -1,7 +1,6 @@
 package com.FlipkartKiwiqaFramework.product;
 
 import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -21,7 +20,6 @@ import org.testng.Reporter;
 
 import com.FlipkartKiwiqaFramework.Init.AbstractPage;
 import com.FlipkartKiwiqaFramework.Init.Common;
-import com.FlipkartKiwiqaFramework.Utility.TestData;
 
 
 public class ProductIndexPage extends AbstractPage{
@@ -74,24 +72,6 @@ public class ProductIndexPage extends AbstractPage{
 		}
 		return new ProductVerification(driver);
 	}
-	
-	
-	@FindBy(xpath="//div[@class='_3wU53n']")
-	public List<WebElement> productName;
-	@FindBy(xpath="//div[@class='_1vC4OE _2rQ-NK']")
-	public List<WebElement> productPrice;
-	public void storeNameandPrice() throws IOException {
-		
-		ArrayList<String> pname = new ArrayList<String>();
-		ArrayList<String> pprice = new ArrayList<String>();
-		for(int i=0;i<productName.size() && i<productPrice.size();i++)
-		{
-			pname.add(productName.get(i).getText());
-			pprice.add(productPrice.get(i).getText());
-		}
-		TestData.writeExcel1("C:\\Users\\admin\\git\\FlipkartKiwiqaFramework\\FlipkartKiwiqaFramework\\Data\\Export2.xlsx", "Sheet1", pname, pprice);
-	}
-	
 	
 	@FindBy(xpath=".//div[@class='_3G9WVX oVjMho']/div[@class='_3aQU3C']")
 	WebElement sourceLocator;
@@ -150,21 +130,19 @@ public class ProductIndexPage extends AbstractPage{
 				Common.pause(2);
 			}
 		}
-		
 		return new ProductVerification(driver);
 	}
-	
 	
 	@FindBy(xpath=".//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")
 	WebElement productAddtoCart;
 	public ProductVerification addToCart()
 	{
 		try {
-			ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-			driver.switchTo().window(tabs.get(1));
+//			ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+//			driver.switchTo().window(tabs.get(1));
 			
-//			String parentWinHandle = driver.getWindowHandle();
-//			Common.findAndSwitchToSecondWindow(driver, parentWinHandle);
+			String parentWinHandle = driver.getWindowHandle();
+			Common.findAndSwitchToSecondWindow(driver, parentWinHandle);
 			
 //			String MainWindow = driver.getWindowHandle();
 //			ArrayList<String> windowHandles = new ArrayList<String>(driver.getWindowHandles());

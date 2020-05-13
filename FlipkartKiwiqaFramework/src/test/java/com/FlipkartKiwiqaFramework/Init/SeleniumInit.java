@@ -2,18 +2,14 @@ package com.FlipkartKiwiqaFramework.Init;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
@@ -43,8 +39,6 @@ import com.FlipkartKiwiqaFramework.product.ProductIndexPage;
 import com.FlipkartKiwiqaFramework.product.ProductVerification;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumInit{
 	public String suiteName = "";
@@ -101,8 +95,8 @@ public class SeleniumInit{
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) throws IOException 
 	{
-//		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
-//		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
+		seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
+		seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 		testUrl=TestData.getValueFromConfig("config.properties","URL");
 		//System.out.println("Payer URL: "+PayertestURL);
 	}
@@ -125,7 +119,7 @@ public class SeleniumInit{
 		{
 			targetBrowser="ie11";
 		}
-//		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
@@ -168,7 +162,7 @@ public class SeleniumInit{
 			osName = System.getProperty("os.name");
 			HomeDir=System.getProperty("user.home");
 			driver= new FirefoxDriver(capability);
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("ie8") || targetBrowser.equalsIgnoreCase("IE"))
 		{
 			capability = DesiredCapabilities.internetExplorer();
@@ -179,7 +173,7 @@ public class SeleniumInit{
 			capability.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("ie9"))
 		{
 			capability = DesiredCapabilities.internetExplorer();
@@ -202,18 +196,13 @@ public class SeleniumInit{
 			capability.setJavascriptEnabled(true);
 			osName = capability.getPlatform().name();
 			driver= new InternetExplorerDriver(capability);
-//			driver = new RemoteWebDriver(remote_grid, capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
 		}else if (targetBrowser.contains("chrome") || targetBrowser.equalsIgnoreCase("chrome"))
 		{
-			
-			
 			capability = DesiredCapabilities.chrome();
-//			File driverpath = new File("Resource/chromedriver.exe");
-//			String path1 = driverpath.getAbsolutePath();
-//			System.setProperty("webdriver.chrome.driver",path1);
-			
-			WebDriverManager.chromedriver().setup();
-			
+			File driverpath = new File("Resource/chromedriver.exe");
+			String path1 = driverpath.getAbsolutePath();
+			System.setProperty("webdriver.chrome.driver",path1);
 			final ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.setBinary("/usr/bin/chromium-browser");
 			//chromeOptions.addArguments("--headless");
@@ -230,7 +219,23 @@ public class SeleniumInit{
 //			capability.setJavascriptEnabled(true);
 //			osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			driver= new ChromeDriver(capability);
+//			driver= new ChromeDriver(capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
+			
+			
+			
+//			capability = DesiredCapabilities.chrome();
+//			File driverpath = new File("Resource/chromedriver.exe");
+//			String path1 = driverpath.getAbsolutePath();
+//			System.setProperty("webdriver.chrome.driver",path1);
+//			capability.setBrowserName("chrome");
+////			capability.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+////			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+//			capability.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+//			capability.setCapability("nativeEvents", false);
+//			capability.setJavascriptEnabled(true);
+//			osName = capability.getPlatform().name();
+//			driver= new ChromeDriver(capability);
 //			driver = new RemoteWebDriver(remote_grid, capability);
 			
 		}else if (targetBrowser.contains("safari"))
@@ -273,10 +278,9 @@ public class SeleniumInit{
 	 * After Method
 	 * 
 	 * @param testResult
-	 * @throws Exception 
 	 */
 	@AfterMethod(alwaysRun = true)
-	public void tearDown(ITestResult testResult,ITestContext testContext) throws Exception
+	public void tearDown(ITestResult testResult,ITestContext testContext)
 	{
 		String screenshotName="";
 		testName = testResult.getName();
@@ -296,12 +300,9 @@ public class SeleniumInit{
 //				Result="Skeep";
 				Result="Skip";
 			}
-//			TestData.getDataForDataprovider("C:\\Users\\admin\\git\\FlipkartKiwiqaFramework\\FlipkartKiwiqaFramework\\Data\\Export.xlsx", "Sheet1", 0, 0);
-			
 			//TestData.updatedBuildAnalysis("BuildAnalysis.xlsx", "BuildAnalysis",header ,testName, Result,col);
 		}catch(Exception e)
 		{
-//			TestData.readExcel("C:\\Users\\admin\\git\\FlipkartKiwiqaFramework\\FlipkartKiwiqaFramework\\Data\\Export.xlsx", "Sheet1");
 			System.out.println("Build Analysis Failure");
 		}
 		try 
@@ -373,8 +374,6 @@ public class SeleniumInit{
 				System.out.println(e);
 			}
 		}
-		
-		TestData.readExcel("C:\\Users\\admin\\git\\FlipkartKiwiqaFramework\\FlipkartKiwiqaFramework\\Data\\Export2.xlsx", "Sheet1");
 		driver.manage().deleteAllCookies();
 		driver.close();
 		driver.quit();
