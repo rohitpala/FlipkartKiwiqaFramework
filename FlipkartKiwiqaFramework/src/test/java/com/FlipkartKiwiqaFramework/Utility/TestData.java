@@ -10,9 +10,17 @@ import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.sl.usermodel.Background;
+import org.apache.poi.sl.usermodel.FillStyle;
+import org.apache.poi.ss.formula.functions.Column;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -461,4 +469,73 @@ public class TestData {
 	  }
 	  return col;
 	 }
+	
+	public static void readExcel(String FilePath, String SheetName) throws EncryptedDocumentException, InvalidFormatException, FileNotFoundException, IOException { 
+        //get the excel sheet file location               
+//        String filepath="C:\\Users\\admin\\git\\MavenDemoTest1\\MavenDemoTest1\\src\\test\\java\\excelread\\Export.xlsx";
+          Workbook wb= new WorkbookFactory().create(new FileInputStream(new 
+                      File(FilePath)));
+        //get the sheet which needs read operation
+            Sheet sh = wb.getSheet(SheetName);
+        //get the total row count in the excel sheet	
+            int rowcount = sh.getLastRowNum();
+              for (int i = 0; i <= rowcount; i++) 
+          {
+            // get the total cell count in the excel sheet
+	               int cellcount = sh.getRow(i).getLastCellNum();
+	                  for (int j = 0; j < cellcount; j++) 
+                {                         
+                    //get cell value at the given position [i][j]
+                        String value = sh.getRow(i).getCell(j).getStringCellValue();
+                    //print the cell value
+		                    System.out.println(value);
+		
+	                   }			
+                }	
+          }
+	
+	public static void writeExcel1(String filename, String sheetname,  ArrayList<String> cell1, ArrayList<String> cell2) throws IOException {
+		File datafile = new File(filename);
+		String fullpath = datafile.getAbsolutePath();
+		ExcelWBook = new XSSFWorkbook(fullpath);
+		ExcelWSheet = ExcelWBook.getSheet(sheetname);
+		int totalRows = ExcelWSheet.getLastRowNum();
+		try {
+			int rowno = totalRows + 1;
+			FileInputStream inputStream = new FileInputStream(new File(fullpath));
+			@SuppressWarnings("resource")
+			XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
+			XSSFSheet firstSheet = workbook.getSheetAt(0);
+//			XSSFRow row = firstSheet.createRow(rowno);
+			
+			CellStyle style1 = workbook.createCellStyle();
+			style1.setFillForegroundColor(IndexedColors.BLACK.getIndex());
+			style1.setFillPattern(CellStyle.SOLID_FOREGROUND);
+			Font font = workbook.createFont();
+	        font.setColor(IndexedColors.AQUA.getIndex());
+//	        style1.setFillBackgroundColor(IndexedColors.BLACK.getIndex());
+	        font.setBold(true);
+	        style1.setFont(font);
+	    
+			
+			for(int i=0;i<cell1.size() && i<cell2.size();i++)
+			{
+				Row rw= firstSheet.createRow(i);
+				Cell cl1=rw.createCell(0);
+				cl1.setCellValue(cell1.get(i).toString());
+				cl1.setCellStyle(style1);
+				
+				Cell cl2=rw.createCell(1);
+				cl2.setCellValue(cell2.get(i).toString());
+				cl2.setCellStyle(style1);
+		
+			}
+			inputStream.close();
+			FileOutputStream fos = new FileOutputStream(new File(fullpath));
+			workbook.write(fos);
+			fos.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
 }
