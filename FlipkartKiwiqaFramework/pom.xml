@@ -15,7 +15,7 @@
 		<version.selenium>2.53.1</version.selenium>
 		<version.maven.failsafe>2.17</version.maven.failsafe>
 		<version.commons.lang>2.6</version.commons.lang>
-		<version.logback>1.0.6</version.logback>
+		<version.logback>1.2.0</version.logback>
 		<version.velocity>1.5</version.velocity>
 		<failsafe.report>test-output</failsafe.report><!-- target/failsafe-reports/firefox -->
 	</properties>
